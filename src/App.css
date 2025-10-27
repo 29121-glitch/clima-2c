@@ -1,6 +1,6 @@
-.containner{
+.container{
   min-height: 100vh;
-  background: linear-gradient(135deg,rgba(255, 255, 1, 0.734) 0%, blue 100%);
+  background: linear-gradient(135deg, #ffd620c5 0%, #0051ff 100%);
   padding: 32px;
 }
 .content{
@@ -26,9 +26,9 @@ header p{
   color: #bdeafe;
 }
 .busca-box{
-  background-color: #fff;
+  background: #fff;
   border-radius: 12px;
-  box-shadow: 0 10px 30px #00000096;
+  box-shadow: 0 10px 30px #00000098;
   padding: 24px;
   margin-bottom: 24px;
 }
@@ -42,11 +42,11 @@ header p{
   border: 1px solid #d1d5db;
   border-radius: 16px;
   outline: none;
-  transition: border-color 0.2s, box-shadow 0.2s; 
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 .busca-container input:focus{
-  border-color: #0c73e9;
-  box-shadow: 0 0 0 3px #0062ff71
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px #3b83f639;
 }
 .busca-container button{
   padding: 12px 24px;
@@ -66,6 +66,28 @@ header p{
   cursor: not-allowed;
   background: #9ca3af;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #card-resultado{
   background: #fff;
   border-radius: 12px;
@@ -85,7 +107,6 @@ header p{
   font-weight: bold;
   color: #1f2937;
   margin-bottom: 8px;
-  
 }
 #cidade-desc{
   color: #4b5563;
@@ -104,4 +125,42 @@ header p{
 }
 #temp-sens{
   color: #4b5563;
+}
+#detalhes-box{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 16px;
+}
+.detal-item{
+  background: #ccc;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+}
+.detal.icone{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+.detal-texto{
+  font-size: 0.8em;
+  color: #444;
+  margin-bottom: 4px;
+}
+.detal-valor{
+  font-weight: bold;
+  color: #222;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px){
+  #detalhes-box{
+    grid-template-columns: 1fr;
+  }
+  #temp-valor{
+    font-size: 3em;
+  }
+  header h1{
+    font-size: 1.8em;
+  }
 }
