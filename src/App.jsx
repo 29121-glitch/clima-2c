@@ -39,6 +39,11 @@ function App() {
       setCarregando(false);
     }
   }
+  const handlekeyPress = (e) =>{
+    if (e.key == "Entrar"){
+      buscarClima();
+    }
+  };
   return (
     <>
       <div className="container">
@@ -57,8 +62,16 @@ function App() {
               <input 
                 type="text"
                 placeholder="Digite o nome da cidade.."
-              />
-              <button>Buscar</button>
+                value={cidade}
+                onChange={(e) => setCidade(e.target.value)}
+                onKeyDown={handlekeyPress}
+                 />
+              <button
+               onClick={buscarClima}
+               disabled={carregando}
+               >
+               {carregando ? "Buscando..." : "Buscar"}
+              </button>
             </div>
           </div>
 
